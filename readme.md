@@ -1,3 +1,14 @@
+# Setup environment to run code
+
+python3 -m venv .venv
+
+source .venv/bin/activate
+
+pip install opusfilter
+
+
+
+
 # Tестовое задание для вакансии Junior Python Developer
 
 
