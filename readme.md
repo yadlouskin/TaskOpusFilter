@@ -4,7 +4,10 @@ python3 -m venv .venv
 
 source .venv/bin/activate
 
-pip install opusfilter
+pip install opusfilter[all]
+
+python -m laserembeddings download-models
+
 
 
 
