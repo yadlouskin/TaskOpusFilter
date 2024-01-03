@@ -8,7 +8,8 @@ from opusfilter.embeddings import *
 
 def main():
     sent_emb_filter = SentenceEmbeddingFilter(languages=['en', 'ru'], threshold=0.9)
-    align_filter = word_alignment.WordAlignFilter(src_threshold=10, tgt_threshold=10)
+    align_filter = word_alignment.WordAlignFilter(src_threshold=10, tgt_threshold=10,
+                                                  src_tokenizer=['moses', 'en'], tgt_tokenizer=['moses', 'ru'])
 
     with FilesWrapper(lines_limit=10) as data:
         for en, ru in data:
